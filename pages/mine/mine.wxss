@@ -1,0 +1,87 @@
+page {
+  background: #f9f9f8;
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+  height: 100%;
+}
+
+.mine {
+  background: #F4165F;
+}
+
+.top {
+  height: 300rpx;
+  width: 100%;
+  display: flex;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  align-items: center;
+  color: #ffffff;
+  font-size: 34rpx;
+  font-weight: bold;
+  letter-spacing: 4rpx;
+  justify-content: space-between;
+}
+
+.top image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.mid {
+  width: 100%;
+  background: #f9f9f8;
+  padding: 50rpx 40rpx;
+  box-sizing: border-box;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 300rpx;
+  height: 250rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 2rpx 2rpx 2rpx #efefef;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+}
+
+.item image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.item .go {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40rpx;
+  height: 40rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.item .go image {
+  width: 30rpx;
+  height: 30rpx;
+  left: 5rpx;
+  top: 5rpx;
+  position: absolute;
+}
+
+.item .info {
+  background: #986aef;
+}
+
+.item .order {
+  background: #feb027;
+}

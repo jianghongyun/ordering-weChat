@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<view class="pageBox">
+  <view class='index'>
+    <!-- 菜单分类 -->
+    <view class='left'>
+      <view class='{{index == activeindex ? "menuClass active" : "menuClass"}}' wx:for='{{menuClassList}}' wx:key='{{item.id}}' data-id='{{item.id}}' data-activeindex='{{index}}' bindtap='tabClick'>
+        {{item.menuClassName}}
+      </view>
+    </view>
+
+    <!-- 菜单 -->
+    <view class='right'>
+      <view class='{{index == activeindex ? "show" : "hide"}}' wx:for='{{menuClassList}}' wx:key='{{item.id}}' wx:for-item="out">
+        <block wx:for='{{menuList}}' wx:key='{{item.id}}'>
+          <view wx:if="{{item.menuClassId == out.id}}" class='menu' data-id='{{item.id}}' bindtap='menuDetail'>
+            <view wx:if="{{item.orderNum>0}}" class='mark'>{{item.orderNum}}</view>
+            <view class='menuLeft'><image src='{{item.menuImg}}'></image></view>
+            <view class='menuRight'>
+              <view class='menuName'>{{item.menuName}}</view>
+              <view class='menuDes'>{{item.introduce}}</view>
+              <view class='menuBottom'>
+                <view class='menuPrice'>￥{{item.price}}</view>
+                <view class='addCar' wx:if="{{item.orderNum == 0}}" data-id='{{item.id}}' data-mark="0" catchtap='addCar'>＋</view>
+                <view wx:else class='operateCar' catchtap='javascript:void(0)'>
+                  <view class='reduce' data-id='{{item.id}}' data-mark="1" catchtap='addCar'>
+                    <image src='../../images/reduce.png'></image>
+                  </view>
+                  <view class='number'>{{item.orderNum}}</view>
+                  <view class='add' data-id='{{item.id}}' data-mark="0" catchtap='addCar'>
+                    <image src='../../images/add.png'></image>
+                  </view>                 
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+        
+      </view>
+      
+      
+    </view>
+  </view>
+</view>
+
+
+<!-- 食品详情 -->
+<view wx:if="{{visible}}" class='shade' bindtap='closeLayer'>
+  <view class='layer' catchtap='javascript:void(0)'>
+    <view class='close' catchtap='closeLayer'>×</view>
+    <image src='{{menuDetail.menuImg}}'></image>
+    <view class='layrtTop'>
+      <view class='layerName'>{{menuDetail.menuName}}</view>
+      <view class='layerPrice'>￥{{menuDetail.price}}</view>
+    </view>   
+    <view class='layerTitle'>食品描述</view>
+    <view class='layerDes'>{{menuDetail.introduce}}</view>
+  </view>
+</view>
+
+<!-- 购物袋 -->
+<view wx:if="{{orderTotalNum>0}}" class='settleBox'>
+  <view class='mark1'>{{orderTotalNum}}</view>
+  <view class='settleLeft'>
+    <view class='shopBag' bindtap='shoppingList'>
+      <image src='../../images/shopbag.png'></image>购物袋
+    </view>
+    <view class='settlePrice'>总计<text>￥{{totalMoney}}</text></view>
+  </view>
+  <view class='settleRight' bindtap='settle'>去结算</view>
+</view>
+
+<!-- 购物清单 -->
+<view wx:if="{{menuVisible && orderTotalNum>0}}" class='shoppingList'>
+  <view class='shoppingTitle'>
+    <view class='sel'>已选餐品</view>
+    <view class='clear' bindtap='clear'>清空</view>
+  </view>
+  <view class='shoppingBox'>
+    <block wx:for='{{menuList}}' wx:key='{{item.id}}'>
+      <view wx:if="{{item.orderNum>0}}" class='shoppingItem'>
+        <view>{{item.menuName}}</view>
+        <view>￥{{item.price}}</view>       
+        <view class='operateCar' catchtap='javascript:void(0)'>
+          <view class='reduce' data-id='{{item.id}}' data-mark="1" catchtap='addCar'>
+            <image src='../../images/reduce.png'></image>
+          </view>
+          <view class='number'>{{item.orderNum}}</view>
+          <view class='add' data-id='{{item.id}}' data-mark="0" catchtap='addCar'>
+            <image src='../../images/add.png'></image>
+          </view>                 
+        </view>
+        </view>
+
+    </block>
+    
+  </view>
+</view>
+
+<!-- 购物清单遮罩 -->
+<view wx:if="{{menuVisible && orderTotalNum>0}}" class='menuShade' bindtap='closeList'></view>

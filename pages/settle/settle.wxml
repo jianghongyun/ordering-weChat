@@ -1,0 +1,33 @@
+<!--pages/settle/settle.wxml-->
+<form report-submit bindsubmit='submitOrder'>
+<view class='container'>
+  <view class='title'>
+    <image src='../../images/logo.png'></image>
+    CF餐厅
+  </view>
+  <view class='content'>
+    <view wx:for="{{orderArr}}" wx:key="{{item.id}}" class='item'>
+      <view class='name'>{{item.menuName}}</view>
+      <view class='number'>×{{item.orderNum}}</view>
+      <view class='price'>￥{{item.orderNum*item.price}}</view>
+    </view>
+    
+  </view>
+  <view class='total'>
+    共{{orderTotalNum}}个商品，小计<text>￥{{totalMoney}}</text>
+  </view>
+</view>
+<view class='tableNum'>
+  <view>桌号</view>
+  <input type='number' bindinput='tableNum' placeholder='请填写桌上的号码'></input>
+</view>
+<view class='remark'>
+  <textarea placeholder='备注' bindinput="remark"></textarea>
+</view>
+<view class='bottom'>
+  <view class='boLeft'>合计：</view>
+  <view class='boMid'>￥{{totalMoney}}</view>
+  <!-- <view class='boRight' bindtap='submitOrder'>提交订单</view> -->
+  <button class='boRight' form-type="submit">提交订单</button>
+</view>
+</form>

@@ -1,0 +1,26 @@
+<view class='title'>{{nickName}}</view>
+
+<view class='infoBox'>
+  <view class='info'>
+    <view class='label'>姓名</view>
+    <input placeholder='姓名' value='{{name}}' bindinput='name'></input>
+  </view>
+  <view class='info'>
+    <view class='label'>手机号</view>
+    <input placeholder='手机号' value='{{phone}}' bindinput='phone'></input>
+  </view>
+  <view class='info'>
+    <view class='label'>微信昵称</view>
+    <view>{{nickName}}</view>
+  </view>
+  <view class='info'>
+    <view class='label'>性别</view>
+    <radio-group class="radio-group" bindchange="gender">
+      <radio value="1" checked="{{gender == '1' ? 'true': 'false'}}" />男
+      <radio value="2" checked="{{gender == '2' ? 'true': 'false'}}"/>女
+    </radio-group>
+  </view>
+</view>
+
+<view class='submit' bindtap='updateInfo'>修改信息</view>
+

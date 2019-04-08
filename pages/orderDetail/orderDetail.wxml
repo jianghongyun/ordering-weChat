@@ -1,0 +1,37 @@
+<!--pages/settle/settle.wxml-->
+<view class='container'>
+  <view class='title'>
+    <image src='../../images/logo.png'></image>
+    CF餐厅
+  </view>
+  <view class='content'>
+    <view wx:for="{{list}}" wx:key="index" class='item'>
+      <view class='name'>{{item.menuName}}</view>
+      <view class='number'>×{{item.menuNum}}</view>
+      <view class='price'>￥{{item.menuNum*item.price}}</view>
+    </view>
+    
+  </view>
+  <view class='total'>
+    总计<text>￥{{order.price}}</text>
+  </view>
+</view>
+
+<view class='infoBox'>
+  <view class='info'>
+    <view class='row'>
+      <view class='label'>订 单 号</view>
+      <view class='con'>{{order.orderNum}}</view>
+    </view>
+    <view class='row'>
+      <view class='label'>创建时间</view>
+      <view class='con'>{{order.createdAt}}</view>
+    </view>
+    <view class='row'>
+      <view class='label'>备　　注</view>
+      <view class='con'>{{order.remark}}</view>
+    </view>
+  </view>
+</view>
+
+

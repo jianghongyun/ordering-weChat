@@ -1,0 +1,132 @@
+/* pages/settle/settle.wxss */
+page {
+  background: #f9f9f8;
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+}
+
+.container {
+  width: 100%;
+  padding: 0 30rpx;
+  background: #fff;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+}
+
+.title image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.content {
+  width: 100%;
+  border-bottom: 2rpx solid #ebebeb;
+  border-top: 2rpx solid #ebebeb;
+  padding: 20rpx 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  color: #333;
+}
+
+.name {
+  width: 50%;
+}
+
+.number {
+  width: 20%;
+}
+
+.price {
+  width: 30%;
+  text-align: right;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100rpx;
+  width: 100%;
+}
+
+.total text {
+  color: #f4165f;
+  font-size: 32rpx;
+}
+
+.tableNum {
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  margin: 1rem 0;
+  background: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tableNum input {
+  border: none;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #666;
+  padding-left: 20rpx;
+}
+
+.remark {
+  padding: 0 30rpx 100rpx 30rpx;
+  background: #fff;
+}
+
+.remark textarea {
+  width: 100%;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  color: #666;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #999;
+  background: #fff;
+  width: 100%;
+}
+
+.boMid {
+  color: #f4165f;
+  margin-right: 20rpx;
+}
+
+.boRight {
+  color: #fff;
+  background: #f4165f;
+  height: 100%;
+  width: 180rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin: 0;
+  padding: 0;
+  font-size: 32rpx;
+  border-radius: 0;
+}
+

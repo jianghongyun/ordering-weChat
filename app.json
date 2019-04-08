@@ -1,0 +1,44 @@
+{
+  "pages":[ 
+    "pages/authorization/authorization",
+    "pages/info/info",
+    
+    "pages/index/index", 
+    "pages/orderList/orderList",
+     
+    "pages/orderDetail/orderDetail",
+    
+    "pages/mine/mine",
+    
+    "pages/settle/settle",
+   
+    
+    
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F4165F",
+    "navigationBarTitleText": "CF餐厅",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#F4165F",
+    "backgroundColor": "#f4f4f4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点餐",
+        "iconPath": "images/index1.png",
+        "selectedIconPath": "images/index2.png"      
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine1.png",
+        "selectedIconPath": "images/mine2.png"
+      }
+    ]
+  }
+}

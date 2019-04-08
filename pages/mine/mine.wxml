@@ -1,0 +1,27 @@
+<!--pages/mine/mine.wxml-->
+<view class='mine'>
+  <view class='top'>
+    <view>
+      <view>美味出自我手</view>
+      <view>欢乐源自你心</view>
+    </view>
+    <image src='{{headImg}}'></image>
+  </view>
+  <view class='mid'>
+    <view class='item' bindtap='toInfo'>
+      <image src='../../images/me.png'></image>
+      <view>我的信息</view>
+      <view class='go info'>
+        <image src='../../images/right.png'></image>
+      </view>
+    </view>
+    <view class='item' bindtap='toPage'>
+      <image src='../../images/order.png'></image>
+      <view>我的订单</view>
+      <view class='go order'>
+        <image src='../../images/right.png'></image>
+      </view>
+    </view>
+    
+  </view>
+</view>

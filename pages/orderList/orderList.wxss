@@ -1,0 +1,73 @@
+/* pages/orderList/orderList.wxss */
+page {
+  background: #f9f9f8;
+  font-size: 30rpx;
+  font-family: 'Microsoft YaHei';
+  height: 100%;
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2rpx 2rpx 2rpx #efefef;
+  box-sizing: border-box;
+  padding: 20rpx;
+  overflow-y: auto;
+}
+
+.list {
+  width: 100%;
+  box-shadow: 2rpx 2rpx 2rpx #efefef, -2rpx -2rpx 2rpx #efefef;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  
+}
+
+.list image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.ordernum {
+  font-size: 32rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.right {
+  width: 540rpx;
+}
+
+.bottom {
+  display: flex;
+  align-content: space-between;
+  color: #666;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.date {
+  width: 340rpx;
+}
+
+.price {
+  width: 200rpx;
+  color: #f4165f;
+  text-align: right;
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
